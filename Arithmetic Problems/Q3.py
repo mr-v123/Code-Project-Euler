@@ -1,6 +1,6 @@
 def isPalindrome(s):
-    good = 1
-    n = 0
+    good = 1     #Use for conditional check
+    n = 0        #The position in the string
     while n <= int(len(s)/2) and good ==1:
         if not s[n] == s[-(n+1)]:
                 good = 0
@@ -12,6 +12,6 @@ for a in range(100, 1000):
      for b in range(100, 1000):
           if isPalindrome(str(a*b)):
                if a*b > ans:
-                    ans = a*b
+                    ans = a*b      #Find the largest palindrome product of two 3-digit nums
 
 print(ans)
