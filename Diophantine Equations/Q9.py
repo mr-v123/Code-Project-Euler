@@ -1,7 +1,8 @@
-#a+b+c = 1000 and a^2 + b^2 = c^2 => (1000-a)(1000-b) = 500000, a+b < 667
-for a in range(1, 667):
-    for b in range(1, 667-a):
-        if (1000-a)*(1000-b) == 500000:
-            c = 1000-a-b
+#Edit the code to find the pythagorean triplet (a, b, c) when we know the sum of a, b and c!
+Sum = int(input('Enter the sum of a, b and c: '))
+for a in range(1, Sum - int(Sum/3)):
+    for b in range(a+1, Sum - a):
+        if (Sum-a)*(Sum-b) == Sum**2/2:
+            c = Sum-a-b
             if a**2 + b**2 == c**2:
-                print(a*b*c)
+                print(a, b, c)
